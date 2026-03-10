@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
+import howitworksBg from "@/assets/howitworks-bg.jpg";
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-32 px-6 md:px-16 lg:px-24 border-t border-border">
-      <div className="max-w-5xl">
-        <p className="font-mono text-sm text-muted-foreground mb-4 tracking-wider">
+    <section
+      className="py-32 px-6 md:px-16 lg:px-24 relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${howitworksBg})` }}
+    >
+      <div className="absolute inset-0 bg-foreground/75" />
+      <div className="relative z-10 max-w-5xl">
+        <p className="font-mono text-sm text-primary mb-4 tracking-wider">
           // process
         </p>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mb-20">
+        <h2 className="font-mono text-3xl md:text-4xl font-bold text-background mb-20">
           How It Works
         </h2>
 
