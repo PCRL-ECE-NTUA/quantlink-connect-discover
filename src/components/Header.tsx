@@ -22,7 +22,7 @@ const Header = () => {
         <Link
           to="/"
           className={`font-mono text-lg font-bold tracking-tight transition-colors ${
-            scrolled ? "text-foreground" : "text-background"
+            scrolled ? "text-foreground" : "text-background/90"
           }`}
         >
           QuantLink
