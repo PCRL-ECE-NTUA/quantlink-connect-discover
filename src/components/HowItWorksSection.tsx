@@ -16,6 +16,59 @@ const HowItWorksSection = () => {
           How It Works
         </h2>
 
+        {/* 3-box diagram */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 py-12 mb-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="border border-background/30 px-8 py-5 font-mono text-sm text-background"
+          >
+            Data Input
+          </motion.div>
+
+          <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.3 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary"
+            />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="border-2 border-primary px-8 py-5 font-mono text-sm font-semibold text-background"
+          >
+            QuantLink Core
+          </motion.div>
+
+          <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary"
+            />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="border border-background/30 px-8 py-5 font-mono text-sm text-background"
+          >
+            Result Output
+          </motion.div>
+        </div>
+
         {/* Animated workflow pipeline */}
         <div className="relative max-w-3xl">
           {[
