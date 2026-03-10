@@ -86,7 +86,7 @@ const HowItWorksSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="border border-border px-8 py-5 font-mono text-sm text-foreground"
+            className="border border-background/30 px-8 py-5 font-mono text-sm text-background"
           >
             Result Output
           </motion.div>
