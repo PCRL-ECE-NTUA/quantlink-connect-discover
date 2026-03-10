@@ -64,7 +64,7 @@ const HowItWorksSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="border-2 border-foreground px-8 py-5 font-mono text-sm font-semibold text-foreground"
+            className="border-2 border-primary px-8 py-5 font-mono text-sm font-semibold text-background"
           >
             QuantLink Core
           </motion.div>
