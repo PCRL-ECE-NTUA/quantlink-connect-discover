@@ -85,9 +85,6 @@ const HowItWorksSection = () => {
             </div>
           ))}
         </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
