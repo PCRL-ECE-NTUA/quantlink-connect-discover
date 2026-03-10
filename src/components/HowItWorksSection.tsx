@@ -70,7 +70,7 @@ const HowItWorksSection = () => {
           </motion.div>
 
           {/* Line 2 */}
-          <div className="relative w-px h-12 md:w-24 md:h-px bg-border">
+          <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
