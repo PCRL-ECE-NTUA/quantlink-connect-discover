@@ -92,39 +92,32 @@ const HowItWorksSection = () => {
           </motion.div>
         </div>
 
-        {/* Steps description */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+        {/* Workflow steps */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {[
-            {
-              step: "01",
-              title: "Configure",
-              desc: "Select any active satellite, define your OGS location, and set payload and protocol parameters.",
-            },
-            {
-              step: "02",
-              title: "Analyze",
-              desc: "QuantLink models the full quantum communication chain — orbit, atmosphere, ground segment, and QKD channel.",
-            },
-            {
-              step: "03",
-              title: "Extract",
-              desc: "Retrieve QKD KPIs, schedule overpasses, forecast conditions, and plan your next mission.",
-            },
+            { step: "01", title: "Select Any Active Satellite", desc: "Choose from all active satellites across LEO, MEO, and GEO orbits." },
+            { step: "02", title: "Forecast Satellite's Orbit", desc: "Predict orbital trajectory up to 5 days ahead with high precision." },
+            { step: "03", title: "Schedule OGS Overpasses", desc: "Identify and schedule optimal overpass windows for your ground station." },
+            { step: "04", title: "Forecast Cloud Coverage", desc: "Assess atmospheric conditions and cloud-free line of sight probability." },
+            { step: "05", title: "Extract QKD KPIs", desc: "Compute secret key rate, QBER, and other critical performance metrics." },
+            { step: "06", title: "Plan Your Overpasses", desc: "Optimize overpass scheduling based on link budget and atmospheric forecasts." },
+            { step: "07", title: "Prepare Your Next Mission", desc: "Consolidate analysis results to plan and validate upcoming QKD missions." },
           ].map((item, i) => (
             <motion.div
               key={item.step}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.15 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="border-t border-background/20 pt-5"
             >
-              <span className="font-mono text-3xl font-bold text-primary">
+              <span className="font-mono text-2xl font-bold text-primary">
                 {item.step}
               </span>
-              <h3 className="font-mono text-lg font-semibold text-background mt-3 mb-2">
+              <h3 className="font-mono text-sm font-semibold text-background mt-3 mb-2">
                 {item.title}
               </h3>
-              <p className="font-sans text-base text-background/60 leading-relaxed">
+              <p className="font-sans text-sm text-background/50 leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
