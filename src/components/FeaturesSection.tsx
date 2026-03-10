@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import featuresBg from "@/assets/features-bg.jpg";
 
 const features = [
   {
@@ -25,12 +26,16 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-32 px-6 md:px-16 lg:px-24 border-t border-border">
-      <div className="max-w-5xl">
-        <p className="font-mono text-sm text-muted-foreground mb-4 tracking-wider">
+    <section
+      className="py-32 px-6 md:px-16 lg:px-24 relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${featuresBg})` }}
+    >
+      <div className="absolute inset-0 bg-foreground/85" />
+      <div className="relative z-10 max-w-5xl">
+        <p className="font-mono text-sm text-primary mb-4 tracking-wider">
           // features
         </p>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mb-20">
+        <h2 className="font-mono text-3xl md:text-4xl font-bold text-background mb-20">
           Capabilities
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -41,12 +46,12 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="border-t border-border pt-6"
+              className="border-t border-background/20 pt-6"
             >
-              <h3 className="font-mono text-lg font-semibold text-foreground mb-3">
+              <h3 className="font-mono text-lg font-semibold text-background mb-3">
                 {feature.title}
               </h3>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+              <p className="font-sans text-base text-background/60 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
