@@ -121,10 +121,10 @@ const HowItWorksSection = () => {
               <span className="font-mono text-3xl font-bold text-primary">
                 {item.step}
               </span>
-              <h3 className="font-mono text-lg font-semibold text-foreground mt-3 mb-2">
+              <h3 className="font-mono text-lg font-semibold text-background mt-3 mb-2">
                 {item.title}
               </h3>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+              <p className="font-sans text-base text-background/60 leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
