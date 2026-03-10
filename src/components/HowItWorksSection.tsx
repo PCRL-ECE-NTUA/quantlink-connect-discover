@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
+import howitworksBg from "@/assets/howitworks-bg.jpg";
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-32 px-6 md:px-16 lg:px-24 border-t border-border">
-      <div className="max-w-5xl">
-        <p className="font-mono text-sm text-muted-foreground mb-4 tracking-wider">
+    <section
+      className="py-32 px-6 md:px-16 lg:px-24 relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${howitworksBg})` }}
+    >
+      <div className="absolute inset-0 bg-foreground/75" />
+      <div className="relative z-10 max-w-5xl">
+        <p className="font-mono text-sm text-primary mb-4 tracking-wider">
           // process
         </p>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mb-20">
+        <h2 className="font-mono text-3xl md:text-4xl font-bold text-background mb-20">
           How It Works
         </h2>
 
@@ -19,13 +24,13 @@ const HowItWorksSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="border border-border px-8 py-5 font-mono text-sm text-foreground"
+            className="border border-background/30 px-8 py-5 font-mono text-sm text-background"
           >
             Data Input
           </motion.div>
 
           {/* Line 1 */}
-          <div className="relative w-px h-12 md:w-24 md:h-px bg-border">
+          <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -59,13 +64,13 @@ const HowItWorksSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="border-2 border-foreground px-8 py-5 font-mono text-sm font-semibold text-foreground"
+            className="border-2 border-primary px-8 py-5 font-mono text-sm font-semibold text-background"
           >
             QuantLink Core
           </motion.div>
 
           {/* Line 2 */}
-          <div className="relative w-px h-12 md:w-24 md:h-px bg-border">
+          <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -81,7 +86,7 @@ const HowItWorksSection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="border border-border px-8 py-5 font-mono text-sm text-foreground"
+            className="border border-background/30 px-8 py-5 font-mono text-sm text-background"
           >
             Result Output
           </motion.div>
@@ -116,15 +121,16 @@ const HowItWorksSection = () => {
               <span className="font-mono text-3xl font-bold text-primary">
                 {item.step}
               </span>
-              <h3 className="font-mono text-lg font-semibold text-foreground mt-3 mb-2">
+              <h3 className="font-mono text-lg font-semibold text-background mt-3 mb-2">
                 {item.title}
               </h3>
-              <p className="font-sans text-base text-muted-foreground leading-relaxed">
+              <p className="font-sans text-base text-background/60 leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );
