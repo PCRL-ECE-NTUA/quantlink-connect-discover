@@ -8,7 +8,7 @@ const specs = [
   { label: "Detectors", value: "SPADs / SNSPDs / Custom" },
   { label: "Wavelength", value: "1550 nm / 810 nm" },
   { label: "Forecast Window", value: "Up to 5 days" },
-  { label: "Parameters", value: "40+ inputs, 15+ outputs" },
+  { label: "Parameters", value: "40+ inputs, 25+ outputs" },
 ];
 
 const SpecsSection = () => {
