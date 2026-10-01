@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { PLATFORM_URL } from "@/lib/constants";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import qrbitlinkLogo from "@/assets/qrbitlink-light.png";
 
 const HeroSection = () => {
   return (
@@ -18,8 +20,12 @@ const HeroSection = () => {
         <p className="font-mono text-sm text-primary mb-8 tracking-wider">
           // satellite_qkd.mission_planning
         </p>
-        <h1 className="font-mono text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6">
-          QuantLink
+        <h1 className="mb-6">
+          <img
+            src={qrbitlinkLogo}
+            alt="QRBITLink"
+            className="h-14 md:h-20 lg:h-24 w-auto max-w-full"
+          />
         </h1>
         <p className="font-mono text-lg md:text-xl text-background/80 mb-4 max-w-2xl leading-relaxed">
           Satellite QKD mission planning software tool.
@@ -29,12 +35,20 @@ const HeroSection = () => {
           Model the end-to-end quantum communication chain. Customize satellite orbits, OGS, payload 
           characteristics, and QKD protocols.
         </p>
-        <Link
-          to="/login"
-          className="inline-block bg-primary text-primary-foreground font-mono text-sm font-semibold px-8 py-4 hover:opacity-90 transition-opacity"
-        >
-          Access Platform →
-        </Link>
+        <div className="flex flex-wrap gap-4">
+          <a
+            href={PLATFORM_URL}
+            className="bg-primary text-primary-foreground font-mono text-sm font-semibold px-8 py-4 hover:opacity-90 transition-opacity"
+          >
+            Access Platform →
+          </a>
+          <Link
+            to="/demo"
+            className="border border-background/40 text-background font-mono text-sm font-semibold px-8 py-4 hover:bg-background/10 transition-colors"
+          >
+            Book a Demo
+          </Link>
+        </div>
       </motion.div>
     </section>
   );

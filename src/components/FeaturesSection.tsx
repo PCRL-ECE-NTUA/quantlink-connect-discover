@@ -5,7 +5,7 @@ const features = [
   {
     title: "Link Budget Calculator",
     description:
-      "Compute key performance indicators by modelling the complete satellite-to-ground quantum communication chain with over 40 configurable inputs and 15 output metrics.",
+      "Compute key performance indicators by modelling the complete satellite-to-ground quantum communication chain with over 40 configurable inputs and 25+ output metrics.",
   },
   {
     title: "Mission Planning Assistant",

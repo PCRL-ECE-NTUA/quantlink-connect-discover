@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { PLATFORM_URL } from "@/lib/constants";
+import qrbitlinkLogo from "@/assets/qrbitlink-dark.png";
 import { useState, useEffect } from "react";
 
 const Header = () => {
@@ -19,20 +21,23 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center justify-between px-6 md:px-16 lg:px-24 h-16">
-        <Link
-          to="/"
-          className={`font-mono text-lg font-bold tracking-tight transition-colors ${
-            scrolled ? "text-foreground" : "text-background/90"
-          }`}
-        >
-          QuantLink
+        <Link to="/" className="hover:opacity-80 transition-opacity">
+          <img src={qrbitlinkLogo} alt="QRBITLink" className="h-8 w-auto" />
         </Link>
-        <Link
-          to="/login"
-          className="font-mono text-sm text-primary font-semibold hover:opacity-80 transition-opacity"
-        >
-          Log In →
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/demo"
+            className="font-mono text-sm text-foreground font-semibold hover:opacity-80 transition-opacity"
+          >
+            Book a Demo
+          </Link>
+          <a
+            href={PLATFORM_URL}
+            className="font-mono text-sm text-primary font-semibold hover:opacity-80 transition-opacity"
+          >
+            Log In →
+          </a>
+        </div>
       </div>
     </header>
   );

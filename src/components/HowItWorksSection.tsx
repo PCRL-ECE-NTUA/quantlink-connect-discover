@@ -45,7 +45,7 @@ const HowItWorksSection = () => {
             transition={{ duration: 0.4, delay: 0.2 }}
             className="border-2 border-primary px-8 py-5 font-mono text-sm font-semibold text-background"
           >
-            QuantLink Core
+            QRBITLink Core
           </motion.div>
 
           <div className="relative w-px h-12 md:w-24 md:h-px bg-background/20">

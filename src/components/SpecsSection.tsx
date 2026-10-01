@@ -5,7 +5,7 @@ const specs = [
   { label: "Orbital Tracking", value: "All active satellites available" },
   { label: "OGS Selection", value: "Any OGS globally" },
   { label: "QKD Protocol", value: "Efficient BB84 / Entanglement-based BBM92" },
-  { label: "Detectors", value: "SPADs / SNSPDs" },
+  { label: "Detectors", value: "SPADs / SNSPDs / Custom" },
   { label: "Wavelength", value: "1550 nm / 810 nm" },
   { label: "Forecast Window", value: "Up to 5 days" },
   { label: "Parameters", value: "40+ inputs, 15+ outputs" },
