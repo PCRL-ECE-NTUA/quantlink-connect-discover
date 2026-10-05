@@ -3,13 +3,14 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  // When deployed to GitHub Pages at https://<owner>.github.io/quantlink-connect-discover/
-  // assets must be served from this subpath. In dev/preview we keep the root.
-  base: mode === "production" ? "/quantlink-connect-discover/" : "/",
+export default defineConfig(() => ({
+  // Served from the root of a custom domain on GitHub Pages, so no subpath is needed.
+  base: "/",
   server: {
     host: "::",
     port: 8080,
+    // Allow sharing the dev server through ngrok tunnels
+    allowedHosts: [".ngrok-free.app"],
     hmr: {
       overlay: false,
     },

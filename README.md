@@ -2,7 +2,7 @@
 
 Landing site for QRBITLink, QRBIT's satellite QKD mission planning software tool.
 
-Live site: https://pcrl-ece-ntua.github.io/quantlink-connect-discover/
+Live site: https://qrbitlink.com/
 
 ## Local development
 
