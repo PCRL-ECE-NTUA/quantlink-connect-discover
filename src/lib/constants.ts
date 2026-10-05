@@ -1,2 +1,1 @@
-// TODO: set to the QRBITLink platform URL
-export const PLATFORM_URL = "#";
+export const PLATFORM_URL = "https://platform.qrbitlink.com";
