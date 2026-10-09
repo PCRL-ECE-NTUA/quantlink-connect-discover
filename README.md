@@ -1,4 +1,4 @@
-# QRBITLink
+# QRBITLINK UI
 
 Landing site for QRBITLink, QRBIT's satellite QKD mission planning software tool.
 
