@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import qrbitlinkLogo from "@/assets/qrbitlink-light.png";
 
-const SALES_EMAIL = "sales@qrbit.gr";
+const SALES_EMAIL = "info@qrbit.gr";
 
 const BookDemo = () => {
   return (
